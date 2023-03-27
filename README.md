@@ -15,3 +15,32 @@ run this:
   }
 }
 ```
+
+## Dev note
+
+The commands are self-explainatory
+
+```sh
+sudo sqd up
+sudo sqd down
+sudo sqd down && sudo sqd up && sqd process
+sqd process
+sqd build
+sqd deploy .
+sqd server
+sqd migration:generate
+sqd typegen
+sqd migration:clean && sqd build && sqd migration:generate
+sqd codegen
+```
+
+## Migration
+
+```sh
+sqd codegen
+sqd build
+sqd up
+sqd migration:generate
+sqd migration:apply
+sqd deploy .
+```

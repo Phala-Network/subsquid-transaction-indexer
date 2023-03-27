@@ -1,13 +1,15 @@
 import type { ProcessorConfig } from './processorConfig'
 import fs from 'fs'
 import { assertNotNull } from '@subsquid/substrate-processor'
+import { Account } from '../model/generated/account.model';
 
 export const WHITELIST_CONFIG: IWhiteListConfing = getJSON(
     'assets/whitelist-config.json'
 )
 
 interface IWhiteListConfing {
-    whitelistItems: string[]
+    Accounts: string[],
+    Events: String[],
 }
 
 function getJSON(filename: string) {

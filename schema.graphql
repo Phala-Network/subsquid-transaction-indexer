@@ -2,6 +2,7 @@ type Account @entity {
   "Account address"
   id: ID!
   transactions: [Transaction!]! @derivedFrom(field: "account")
+  depositEvents: [DepositEvent!]! @derivedFrom(field: "account")
 }
 
 type Transaction @entity {
@@ -10,5 +11,18 @@ type Transaction @entity {
   nonce: Int!
   result: Boolean!
   blockNumber: Int! @index
-  timestamp: DateTime! @index
+  "Unix timestamp"
+  timestamp: BigInt! @index
+}
+
+type DepositEvent @entity {
+  id: ID!
+  name: String!
+  account: Account!
+  amount: String!
+  result: Boolean!
+  indexInBlock: Int! @index
+  blockNumber: Int! @index
+  "Unix timestamp"
+  timestamp: BigInt! @index
 }

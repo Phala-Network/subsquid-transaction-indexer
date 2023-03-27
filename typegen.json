@@ -3,5 +3,5 @@
   "specVersions": "https://acala.archive.subsquid.io/graphql",
   "events": [],
   "calls": [],
-  "storage": ["System.Account"]
+  "storage": []
 }
