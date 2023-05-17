@@ -21,6 +21,12 @@ export function getChainConfig(): ProcessorConfig {
     switch (process.env.CHAIN) {
         case 'acala':
             return require('./chains/acala').default
+        case 'moonbeam':
+            return require('./chains/moonbeam').default
+        case 'phala':
+            return require('./chains/phala').default
+        case 'khala':
+            return require('./chains/khala').default
         default:
             throw new Error(`Unsupported chain ${process.env.CHAIN}`)
     }

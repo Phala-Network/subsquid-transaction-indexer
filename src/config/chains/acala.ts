@@ -9,7 +9,7 @@ const config: ProcessorConfig = {
     },
     blockRange: //undefined
     {
-        from: 2704621,
+        from: 3504500,
     }
 };
 

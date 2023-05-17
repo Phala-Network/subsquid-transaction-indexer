@@ -1,7 +1,7 @@
 manifestVersion: subsquid.io/v0.1
-name: graph-acala
+name: graph-phala
 version: 1
-description: 'The very first squid from manifest  '
+description: 'Phala indexer'
 build: 
 deploy:
   addons:
@@ -9,7 +9,7 @@ deploy:
   processor:
     env:
       CHAIN:
-        acala
+        phala
     cmd:
       - node
       - lib/processor
